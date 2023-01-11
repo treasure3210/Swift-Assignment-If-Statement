@@ -39,13 +39,13 @@ print("Your age is \(age). You are \(stage)")
 /// Output:
 ///     5  >  4
 
-var c = 5
+var e = 5
 var d = 4
 
-if c > d {
-    print("\(c) > \(d)")
+if e > d {
+    print("\(e) > \(d)")
 } else {
-    print("\(d) > \(c)")
+    print("\(d) > \(e)")
 }
 
 /// 3. Input the year and print whether that year is a leap year or not.
@@ -105,4 +105,35 @@ if max > min {
     print("Both numbers are equal to each other: max = \(max) & min = \(min)")
 }
 
+/// 6. Input 3 numbers. Display the list of number from lowest to highest
+/// Input:
+///     Enter first number: 20
+///     Enter second number: 60
+///     Enter third number: 10
+/// Output:
+///     10, 20, 60
 
+var a = 20
+var b = 60
+var c = 10
+
+var maximum = a
+var minimum = a
+
+if a < b { maximum = b }
+if a < c { maximum = c }
+if a > b { minimum = b }
+if a > c { minimum = c }
+
+var middle = a + b + c - maximum - minimum
+
+print("\(minimum), \(middle), \(maximum)")
+
+/// 7. Find x in function ax^2 + bx + c = 0
+/// Input:
+///     a = 1
+///     b = 3
+///     c = 2
+/// Output:
+///     x1 = -1
+///     x1 = -2
