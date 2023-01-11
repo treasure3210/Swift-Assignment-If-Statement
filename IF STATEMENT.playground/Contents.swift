@@ -120,6 +120,8 @@ var z = 10
 var maximum = x
 var minimum = x
 
+// Nedd additional if statement inside becuase if y is bigger than z, but both y and z is bigger than x, it would change the maximum to z because of the order that it was setup. So I had to make sure that when we are comparing y & z to x, we have to make sure which one is bigger than another for y & z. 
+
 if x < y {
     if y > z {
         maximum = y
