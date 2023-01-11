@@ -113,19 +113,35 @@ if max > min {
 /// Output:
 ///     10, 20, 60
 
-var a = 20
-var b = 60
-var c = 10
+var x = 20
+var y = 60
+var z = 10
 
-var maximum = a
-var minimum = a
+var maximum = x
+var minimum = x
 
-if a < b { maximum = b }
-if a < c { maximum = c }
-if a > b { minimum = b }
-if a > c { minimum = c }
+if x < y {
+    if y > z {
+        maximum = y
+    }
+}
+if x < z {
+    if z > y {
+        maximum = z
+    }
+}
+if x > y {
+    if z > y {
+        minimum = y
+    }
+}
+if x > z {
+    if y > z {
+        minimum = z
+    }
+}
 
-var middle = a + b + c - maximum - minimum
+var middle = x + y + z - maximum - minimum
 
 print("\(minimum), \(middle), \(maximum)")
 
@@ -137,3 +153,33 @@ print("\(minimum), \(middle), \(maximum)")
 /// Output:
 ///     x1 = -1
 ///     x1 = -2
+
+var a = 1
+var b = 3
+var c = 2
+
+var discriminant = b*b - (4*a*c)
+
+if discriminant > 0 {
+    print("There are two real roots")
+    var root1 = (-b+Int(pow(Double(discriminant), 0.5)))/2*a
+    var root2 = (-b-Int(pow(Double(discriminant), 0.5)))/2*a
+    print("x1 = \(root1), x1 = \(root2)")
+} else if discriminant == 0 {
+    print("There is one real root")
+    var onlyRoot1 = -b/(2*a)
+    print("x1 = \(onlyRoot1)")
+} else if discriminant < 0 {
+    print("There are no real roots")
+}
+
+/// 8. Find x and y, using Cramer's rule 2 linear equations
+/// a1x + b1y = c1
+/// a2x + b2y = c2
+/// Input:
+///     a1, b1, c1, a2, b2, c2
+/// Output:
+///     x: ?
+///     y: ?
+
+let intDictionary = ["a1": "a1", "a2": "a2", "b1": "b1", "b2": "b2", "c1": "c1", "c2": "c2"]
