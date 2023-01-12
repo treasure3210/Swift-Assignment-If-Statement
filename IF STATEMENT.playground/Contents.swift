@@ -184,4 +184,22 @@ if discriminant > 0 {
 ///     x: ?
 ///     y: ?
 
-let intDictionary = ["a1": "a1", "a2": "a2", "b1": "b1", "b2": "b2", "c1": "c1", "c2": "c2"]
+var a1: Double = 8
+var b1: Double = 4
+var c1: Double = 2
+var a2: Double = 9
+var b2: Double = 3
+var c2: Double = 2
+var x12: Double = 0
+var y12: Double = 0
+
+var D = (a1 * b2) - (a2 * b1)
+print(D)
+
+if D != 0 {
+    x12 = ((c1 * b2) - (c2 * b1)) / D
+    print(x12)
+    y12 = ((c2 * a1) - (c1 * a2)) / D
+    print(y12)
+}
+
